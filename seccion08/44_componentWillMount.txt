@@ -1,0 +1,5 @@
+componentWillMount
+- se ejecuta una sola vez antes de render. es el primer método que se ejecuta.
+no se puede acceder al dom, ref o children. todavía no se han cargado
+
+- prepara la configuración del componente, inicializa el state. se puede ejecutar el setState y esperaría a terminar la inicializacion del state

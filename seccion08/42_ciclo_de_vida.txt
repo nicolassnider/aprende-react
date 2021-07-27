@@ -1,0 +1,16 @@
+1 montaje, 
+-   se ejecuta siempre una vez
+-   construye el componente con su estado inicial
+-   obtiene las props
+-   bindea métodos de clase
+-   primera ejecucion de render()
+
+2 actualización
+-   por defecto, se ejecuta cada vez que recibe props o actualiza su estado
+-   controla cuando debe renderizarse nuevamente el componente
+
+3 desmontaje
+-   elimina listeners
+-   elimina referencias al DOM 
+
+
