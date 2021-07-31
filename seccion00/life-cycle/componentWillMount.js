@@ -8,6 +8,11 @@ class ComponentWillMount extends Component {
         this.state = { mensaje: 'mensaje inicial de ComponentWillMount' }
     }
 
+    componentWillMount(){
+        console.log('componentWillMount')
+        this.setState({mensaje:'mensaje modificado en componentWillmount'})
+    }
+
     render() {
         console.log('render de ComponentWillMount')
         return (

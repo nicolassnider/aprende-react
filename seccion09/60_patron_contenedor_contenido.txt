@@ -1,0 +1,14 @@
+Contenedor  (listos, lógicos)->
+    -   tiene lógica
+    -   tiene state
+    -   recupera los datos del servidor
+    -   realiza transformaciones necesarias
+
+Contenido   (tontos, presentacionales)->
+    -   presenta los datos en un layout
+
+1.fetch
+2.data
+3.setState(transformedData)
+4.render
+4.render

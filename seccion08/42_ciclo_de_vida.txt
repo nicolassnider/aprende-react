@@ -5,12 +5,28 @@
 -   bindea métodos de clase
 -   primera ejecucion de render()
 
+constructor(props)
+componentWillMount
+render
+componentDidMount
+
+----------------
 2 actualización
 -   por defecto, se ejecuta cada vez que recibe props o actualiza su estado
 -   controla cuando debe renderizarse nuevamente el componente
 
+componentWIllReceiveProps(nextProps) -> se ejecuta si el ciclo de actualización ha sido provocado porque el componente recibió nuevas props
+shouldComponentUpdate(nextProps, nextState) -
+componentWillUpdate(nextProps,nextState)
+render()
+componentDidUpdate(prevProps,prevState)
+
 3 desmontaje
 -   elimina listeners
 -   elimina referencias al DOM 
+
+componentWillUnmount
+    se ejecuta una vez antes de desmontar. no se llama a setState
+
 
 
