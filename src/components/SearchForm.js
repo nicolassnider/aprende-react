@@ -29,10 +29,8 @@ class SearchForm extends Component {
             .then(res => {
                 res.json().then(resp => {
                     const {query,results} = resp
-                    console.log(query)
-                    console.log(results)
                     this.props.onResults(results)
-                    this.setState({results:[results]})
+                    this.setState({results:[results],query:query})
                 });
 
             })
