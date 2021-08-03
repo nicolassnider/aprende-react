@@ -13,10 +13,12 @@ export class MoviesList extends Component {
             <div className="MoviesList">
                 {
                     movies.map(movie=>{
+                        let id = movie.id
+                        id = id.replaceAll('/title/', '').substring(0, movie.id.length - 1)
                         return(
                             <div key={movie.id} className ="MoviesList-item">
                                 <Movie
-                                    
+                                    id={id}
                                     title={movie.title}
                                     year={movie.year}
                                     poster = {movie.image?movie.image.url:null}

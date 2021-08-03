@@ -10,9 +10,31 @@ class SearchForm extends Component {
     }
 
     _handleChange = (e) => {
+        const terms = e.target.value;
+        
+        if(terms.length>3){
+            this.checkAutoComplete(terms);
+        }
         this.setState({
-            inputMovie: e.target.value
+            inputMovie: terms
         })
+    }
+
+    checkAutoComplete = (terms) => {
+        
+        const termsEncoded = encodeURIComponent(terms);
+        const getDetails = 'https://imdb8.p.rapidapi.com/auto-complete?q='
+        fetch(`${getDetails}${termsEncoded}`, {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-key": API_KEY,
+                "x-rapidapi-host": API_HOST
+            }
+        })
+            .then(res => res.json())
+            .then(autoCompletedResults => {
+                this.setState({ autoCompletedResults: autoCompletedResults })
+            })
     }
 
     _handleSubmit = (e) => {
@@ -28,9 +50,9 @@ class SearchForm extends Component {
         })
             .then(res => {
                 res.json().then(resp => {
-                    const {query,results} = resp
+                    const { query = "", results = [] } = resp
                     this.props.onResults(results)
-                    this.setState({results:[results],query:query})
+                    this.setState({ results: [results], query: query })
                 });
 
             })
