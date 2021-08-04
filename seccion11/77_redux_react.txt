@@ -1,0 +1,12 @@
+evitar la gestión manual de tener que pasar la store a todos nuestro componentes
+leer el estado global desde cualquier lugar de nuestro árbol de elementos
+llamar a acciones desde cualquier componente
+
+patrón contenedor contenido
+
+componentes de presentacion
+Como se ven lsa cosas
+para leer los datos de las props
+invoca llamada de retrono desde los props
+
+
