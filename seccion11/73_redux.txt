@@ -1,0 +1,30 @@
+contenedor del estado global de una aplicación en aplicación basada en la arquitectura Flux de Facebook.
+es una librería externa a react.
+
+redux es la librería mas elegida en proyectos React para abordar el estado de la aplicación
+
+el estado de la aplicación es una objeto
+
+el estado será global. y será modificado a traves de acciones.
+
+
+1. unica fuente de verdad
+2. solo lectura
+3. los estados se generan utilizando funciones puras
+
+store
+    (suscribe)
+view
+    (dispatch)
+actions
+
+reducers 
+
+------------------------------------
+
+actions, objetos planos de js 
+key type = acciones
+
+action creatos (opcionales) al ejecutarla devuelve una action en forma de objeto
+
+reducer funcion pura que recibe estado anterior
