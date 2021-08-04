@@ -10,3 +10,6 @@ para leer los datos de las props
 invoca llamada de retrono desde los props
 
 
+https://stackblitz.com/edit/react-contador-with-local-state
+
+
